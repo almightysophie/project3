@@ -14,16 +14,16 @@ drw_table();
 function drw_table() {
     for (var i = 0; i < canvasWidth;) {
         cxt.beginPath();
-        cxt.lineWidth="1";
-        cxt.strokeStyle="red"; // 红色路径
+        cxt.lineWidth="2.5";
+        cxt.strokeStyle="green";
         cxt.moveTo(i,0);
         cxt.lineTo(i,canvasWidth);
-        cxt.stroke(); // 进行绘制
+        cxt.stroke(); 
         cxt.beginPath();
-        cxt.lineWidth="1";
+        cxt.lineWidth="2.5";
         cxt.moveTo(0,i);
         cxt.lineTo(canvasWidth,i);
-        cxt.stroke(); // 进行绘制
+        cxt.stroke(); 
         i = i+interval;
     }
 }
@@ -77,7 +77,7 @@ function clickEvent(e)
                 }
             }
         }else{
-            // alert("当前点已经存在");
+            // alert
         }
     }  
 }
@@ -125,7 +125,7 @@ function isOver(x1,y1,isTrue) {
 
 
 
-    //判断当前点的横向
+    //horizon
     if (x1>=5*interval) {
         x2 = x1-5*interval;
     }else{
@@ -146,7 +146,7 @@ function isOver(x1,y1,isTrue) {
     if (lineCount>=5) {
         return true;
     }
-    //判断当前点的纵向
+    //vertical
     if (y1>=5*interval) {
         y3 = y1-5*interval;
     }else{
